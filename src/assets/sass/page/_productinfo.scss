@@ -1,0 +1,128 @@
+.section-production-picture{
+    background-color: #F2F7FB;
+    padding: 100px 0 0 0;
+    .container{
+        padding: 0 5%;
+    }
+    img {
+        width: 100%;
+        vertical-align: top;
+        cursor: pointer;
+    }
+    .breadcrumb a + a::before {
+        content: '/';
+    }
+    .breadcrumb a{
+        color: black;
+    }
+    .big-pic{
+        width: 100%;
+        overflow: hidden;
+    }
+    .pic-s{
+        margin-top: 10px;
+        @include img-box(100%)
+    }
+    .info-group{
+        @media screen and (max-width: 767px) {
+            margin-top: 20px;
+        }
+    }
+    .info-group .content{
+        font-size: 60px;
+        margin-left: 10px;
+        margin-top: 30px;
+        @media screen and (max-width: 575px) {
+
+        }
+    }
+    .info-group .line{
+        margin-top: 60px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .info-group .amount button{
+        margin: 0 14px;
+        color: black;
+        background: none;
+        border: 1px solid black;
+        padding: 2px 6px;
+        cursor: pointer;
+    }
+    .info-group .amount {
+        padding:20px 14px;
+    }
+    .info-group .price{
+        padding-top: 10px;
+        padding-left: 14px;
+    }
+    .info-group .button{
+        padding-top: 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+    span {
+        font-size: 2rem;
+        @media screen and (max-width: 767px) {
+            font-size: 2rem;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 1.8rem;
+        }
+    }
+}
+.section-introduce{
+    background-image: url('/img/productioninfo/sea.webp');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    .text-group img {
+        width: 100%;
+        vertical-align: top;
+    }
+    h3 {
+        padding-top:80px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        @media screen and (max-width: 767px) {
+            font-size: 1.6rem;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 1.4rem;
+        }
+    }
+    .container {
+        padding: 0 20%;
+    }
+    .text-group{
+        text-align: center;
+    }
+    .text-group p{
+        font-size: 1.8rem;
+        @media screen and (max-width: 767px) {
+            font-size: 1.6rem;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 1.4rem;
+        }
+    }
+    .text-group .pic{
+        padding-top: 30px;
+        margin: auto;
+    }
+    .text-group .directions{
+        border: 1.5px solid rgb(58, 58, 58);
+        display: block;
+        margin: 0 auto;
+        padding:20px;
+        .pic{
+            width: 80%;
+            padding: 10px 0;
+        }
+    }
+    .text-group .disclaimer{
+        padding: 10px 20px ;
+        background-color: #f0f0f0;
+        margin: 40px auto 30px auto;
+    }
+}

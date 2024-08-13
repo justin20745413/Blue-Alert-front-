@@ -1,0 +1,49 @@
+// base 基本設置
+@import 'base/var';
+@import 'base/reset';
+@import 'base/font';
+@import 'base/grid';
+@import 'base/rwd';
+
+// 其他全局樣式或特定頁面的樣式
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+}
+
+// mixin
+@import 'mixin/img.scss';
+@import 'mixin/evenHover.scss';
+@import 'mixin/fixedSize.scss';
+
+// component 元件
+@import 'component/newscard.scss';
+@import 'component/evenCard.scss';
+@import 'component/shareCard.scss';
+@import 'component/lightBox-share.scss';
+@import 'component/lightBox-even.scss';
+@import 'component/checkoutButton';
+// layout 共用nav / footer
+@import 'layout/nav';
+@import 'layout/footer';
+
+// page 各頁
+@import 'page/index';
+@import 'page/aboutus';
+@import 'page/member';
+@import 'page/event';
+@import 'page/knowledge';
+@import 'page/register';
+@import 'page/foget';
+@import 'page/shop';
+@import 'page/productinfo';
+@import 'page/mallcart';
+@import 'page/profile';
+@import 'page/beachgame';
+@import 'page/mbti';
+@import 'page/news';
+@import 'page/donate';
+@import 'page/newsinner';
+@import 'page/robot';
+

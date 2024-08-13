@@ -1,0 +1,241 @@
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background: rgba(116, 116, 116, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 60px;
+    }
+
+    @media screen and (max-width: 767px) {
+        nav {
+            padding: 5px 40px;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        nav {
+            padding: 5px 20px;
+        }
+    }
+}
+
+nav .nav-logo {
+    height: 40px;
+}
+
+nav .nav-logo img {
+    height: 100%;
+}
+
+nav .navbar {
+    display: flex;
+    gap: 3rem;
+}
+
+nav .navbar i {
+    color: #fff;
+    display: none;
+}
+
+
+nav .navbar .subnav-toggle {
+    position: relative;
+
+    >a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+nav .navbar .subnav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    max-height: 0;
+    min-width: 160px;
+    padding-top: 10px;
+    transition: max-height 0.3s;
+    background-color: transparent;
+    overflow: hidden;
+
+    a {
+        color: #fff;
+    }
+}
+
+
+nav .navbar .subnav li a {
+    color: #fff;
+}
+
+nav .navbar li a {
+    color: #fff;
+}
+
+nav .navbar>li {
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav-member {
+    margin-left: 5px;
+    position: relative;
+}
+
+nav .navbar .nav-member::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+    left: -20%;
+}
+
+#nav-switch {
+    display: none;
+}
+
+nav .hb {
+    display: none;
+}
+
+nav .nav-member {
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
+}
+
+nav .logoutbutton {
+    button {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav .subnav.hover {
+        max-height: 1000px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    nav .hb {
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .hb-icon {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        transition: transform 0.75s ease-out;
+    }
+
+    .hb-icon::before,
+    .hb-icon::after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        transition: transform 0.5s ease-out;
+    }
+
+    .sidebar-hidden .hb-icon {
+        transform: rotate(-180deg);
+    }
+
+    .sidebar-hidden .hb-icon::before {
+        transform: translateY(-8px) rotate(180deg);
+    }
+
+    .sidebar-hidden .hb-icon::after {
+        transform: translateY(8px) rotate(180deg);
+    }
+
+    nav .navbar {
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        gap: unset;
+        max-height: 0;
+        overflow: hidden;
+        transition: .5s;
+        background: $color-primary;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+
+    nav .navbar.active {
+        max-height: 1000px;
+    }
+
+    .subnav-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .navbar li {
+        display: flex;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav .navbar li a {
+        flex-grow: 2;
+    }
+
+    nav .navbar i {
+        display: block;
+    }
+
+    nav .navbar .subnav {
+        background-color: rgba(147, 147, 147, 0.6);
+        max-height: 1000px;
+        position: relative;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    nav .logoutbutton {
+        margin: auto;
+    }
+}
+// 小遊戲不要導覽列
+.hidden-nav {
+    display: none;
+}

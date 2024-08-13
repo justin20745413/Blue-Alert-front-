@@ -1,0 +1,268 @@
+// 進入遊戲
+.section-mbti {
+    background-image: url(/img/mbti/mbti-bg.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .container{
+        margin: 10rem auto;
+        max-width: 60rem;
+        text-align: center;
+        span{
+        font-size: 2rem;
+        color: $color-white;
+        background-color:$color-highlight;
+        padding: 1.5rem 3rem ;
+        border-radius: 2rem;
+        }
+        .content{
+            background-color: $color-white;
+            padding: 20%;
+            border-radius: 4rem;
+            text-align: center;
+            h3,h1{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+// 遊戲規則
+.section-mbti-rule {
+    background-image: url(/img/mbti/mbti-bg.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .container{
+        margin: 10rem auto;
+        max-width: 60rem;
+        text-align: center;
+        h3{
+            line-height: 3rem;
+
+        }
+        span{
+        font-size: 2rem;
+        color: $color-white;
+        background-color:$color-highlight;
+        padding: 1.5rem 3rem ;
+        border-radius: 2rem;
+        }
+        .content{
+            background-color: $color-white;
+            padding: 20%;
+            border-radius: 4rem;
+            text-align: center;
+            h3,h1{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+//遊戲內容
+.section-mbti-game {
+    background-image: url(/img/mbti/mbti-bg.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .container{
+        margin: 10rem auto;
+        max-width: 60rem;
+        text-align: center;
+        .content{
+            background-color: $color-white;
+            padding: 10%;
+            border-radius: 4rem;
+            text-align: center;
+            .game{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 4rem 0;
+                gap: 2rem;
+                img{
+                    height:15rem;
+                    margin-bottom: 1rem;
+                    @media (max-width: 574px) {
+                        width: 10rem;
+                    }
+                }
+                .choose{
+                    position: relative;
+                    width: 7rem;
+                    height: 7rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-highlight;
+                    color: $color-white;
+                    cursor: pointer;
+                    .choosebtn{
+                        //讓按鈕跟choose(父元素)一樣大小
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        color: inherit;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        //預防文字換行
+                        white-space: nowrap;
+                        @media (max-width: 574px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    @media (max-width: 574px) {
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 遊戲結果
+.section-mbti-result {
+    background-image: url(/img/mbti/mbti-bg.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .container{
+        margin: 10rem auto;
+        max-width: 60rem;
+        text-align: center;
+        .content{
+            background-color: $color-white;
+            padding: 10%;
+            border-radius: 4rem;
+            h3{
+                margin-bottom: 4rem;
+            }
+            .mbti{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2rem;
+                text-align: center;
+                background-color: #D2EAF7;
+                border: 1px solid black;
+                border-radius: 4rem;
+                padding: 3rem;
+                img{
+                    width: 15rem;
+                }
+                .txt{
+                    margin-left: 2rem;
+                }
+                h4{
+                    margin-bottom: 2rem;
+                }
+                @media (max-width: 574px) {
+                    img{
+                        width: 10rem;
+                    }
+                    h4{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            p{
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 2rem;
+                color: $color-highlight;
+                cursor: pointer;
+            }
+            .restart{
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.section-mbti-result .container {
+    a{
+        display: inline-block;
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+        font-weight: bold;
+        background-color: #E7A600;
+        color: #fff;
+        padding: 0.75rem 4rem;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-highlight-dark;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+.section-mbti-result .container{
+    a {
+        font-size: 1.4rem;
+        padding: 0.625rem 1.25rem;
+    }
+}
+}
+
+@media screen and (max-width: 576px) {
+    .section-mbti-result .container{
+        a {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+    }
+
+
+// lightbox
+.lightbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: #fff;
+    border:2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    .lightbox-txt{
+        padding: 20px;
+        text-align: center;
+        .close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        h3{
+            margin-bottom: 20px;
+        }
+        img{
+            width: 20rem;
+        }
+    }
+    button{
+        margin-bottom: 20px;
+    }
+}

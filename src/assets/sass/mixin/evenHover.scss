@@ -1,0 +1,57 @@
+//點擊前hover
+@mixin hover-effect($apply-hover: true) {
+    @if $apply-hover {
+        &:hover {
+            background-color: #5f95b1;
+            color: $color-white;
+            transition: .5s;
+
+            .pic {
+                overflow: hidden;
+
+                img {
+                    transform: scale(1.1);
+                    transition: .5s;
+                }
+            }
+
+            .text {
+                .theme {
+
+                    .event-name {
+                        h3 {
+                            color: $color-white;
+                            transition: .5s;
+
+                        }
+                    }
+                }
+
+
+            }
+
+            .more {
+                a {
+                    color: $color-white ;
+                }
+            }
+
+            .addnew i,
+            h3 {
+                color: $color-white;
+            }
+
+        }
+    }
+    @else {
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            transition: none;
+            cursor: default;
+            img {
+                transform: none;
+            }
+        }
+    }
+}
